@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/883be402ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="lg:mx-12">
+    <!-- Heder section -->
+    <header class="mt-6">
+      <div class="navbar">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            ></ul>
+          </div>
+          <a class="btn btn-ghost text-3xl font-bold">ReTro</a>
+        </div>
+
+        <div class="navbar-end gap-4">
+          <div class="hidden lg:flex">
+            <ul class="flex gap-4">
+              <li class="tooltip" data-tip="Home">
+                <div class="bg-gray-100 btn btn-circle">
+                  <i class="fa-solid fa-house"></i>
+                </div>
+              </li>
+              <li class="tooltip" data-tip="Edit">
+                <div class="bg-gray-100 btn btn-circle">
+                  <i class="fa-solid fa-pen"></i>
+                </div>
+              </li>
+              <li class="tooltip" data-tip="Add">
+                <div class="bg-gray-100 btn btn-circle">
+                  <i class="fa-solid fa-user-plus"></i>
+                </div>
+              </li>
+              <li class="tooltip" data-tip="Report">
+                <div class="bg-gray-100 btn btn-circle">
+                  <i class="fa-solid fa-flag"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="bg-indigo-400 rounded-full px-6 font-semibold text-white py-2 hover:bg-indigo-500"
+          >
+            Sign In
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- hero section -->
+    <section>
+      <div class="bg-blue-950 mx-24 my-12 rounded-3xl">
+        <div class="bg-[url('/images/bgbanner.png')] bg-no-repeat">
+          <div class="flex px-12 gap-24">
+            <div class="w-1/2 m-8 grid gap-12">
+              <h1 class="text-5xl text-white font-bold">
+                Welcome to the
+                <span class="text-indigo-400">ReTro</span>
+                Forum
+              </h1>
+              <p class="text-white">
+                Share your favorite opinion and win and wp forum coffee mug!
+              </p>
+              <div class="bg-white rounded-full p-1">
+                <div class="flex mx-auto gap-4">
+                  <input
+                    placeholder="Search Here"
+                    class="w-3/4 rounded-full p-1"
+                    type="search"
+                    name="search"
+                    id=""
+                  />
+                  <button
+                    class="bg-indigo-400 rounded-full px-6 font-semibold text-white py-2 hover:bg-indigo-500"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-3xl w-1/2 m-8 flex">
+              <div class="w-full grid gap-6 m-12">
+                <div class="flex">
+                  <p class="w-3/4">Registered Users</p>
+                  <p>01</p>
+                </div>
+                <div class="flex">
+                  <p class="w-3/4">Forun</p>
+                  <p>05</p>
+                </div>
+                <div class="flex">
+                  <p class="w-3/4">Topics</p>
+                  <p>01</p>
+                </div>
+                <div class="flex">
+                  <p class="w-3/4">Replies</p>
+                  <p>01</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discuss system -->
+    <section>
+      <div class="w-1/2 mx-auto my-12">
+        <h3 class="text-3xl font-bold text-center mb-4">Let’s Discuss</h3>
+        <p class="text-center">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
