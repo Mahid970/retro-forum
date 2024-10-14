@@ -9,13 +9,15 @@ const showAllPost = (posts) => {
   posts.forEach((post) => {
     const postContainer = document.getElementById("post-container");
     const div = document.createElement("div");
-    div.classList = `card bg-gray-100  p-6 my-4`;
+    div.classList = `card bg-gray-100  p-6 my-6`;
     div.innerHTML = `
  
       <div class="flex gap-6">
        
         <div class="w-16 items-start">
-          <div id="is-activated" class="avatar ">
+          <div id="is-activated" class="avatar ${
+            post.isActive ? "online" : "offline"
+          } ">
             <div class="rounded-xl">
               <img
                 src="${post.image}"
@@ -24,7 +26,7 @@ const showAllPost = (posts) => {
           </div>
         </div>
 
-        <div class="grid auto-rows-auto gap-4">
+        <div class="grid auto-rows-auto lg:gap-4 gap-1 ">
           <div class="flex gap-3">
             <small>#${post.category}</small>
             <small>Author : ${post.author.name}</small>
@@ -50,7 +52,9 @@ const showAllPost = (posts) => {
               </div>
             </div>
             <div>
-              <i onclick="handleShowDetails('${post.title}', '${post.view_count}')"
+              <i onclick="handleShowDetails('${post.title}', '${
+      post.view_count
+    }')"
                 class="bg-green-400 p-2 text-white rounded-full fa-solid fa-envelope-open"
               ></i>
             </div>
@@ -61,12 +65,6 @@ const showAllPost = (posts) => {
     `;
 
     postContainer.appendChild(div);
-    const isActivated = document.getElementById("is-activated");
-    if (post.isActive) {
-      isActivated.classList.add("online");
-    } else {
-      isActivated.classList.add("offline");
-    }
   });
 };
 
@@ -113,7 +111,7 @@ const showLatestPosts = (data) => {
   const latestPostContainer = document.getElementById("latest-post-container");
   data.forEach((post) => {
     const div = document.createElement("div");
-    div.classList = "card bg-base-100 w-96 shadow-xl";
+    div.classList = "card bg-base-100 mx-6 lg:w-96  shadow-xl";
     div.innerHTML = `
   <figure class="px-4 pt-4">
         <img
